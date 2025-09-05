@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Shamba Palace</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Welcome Section -->
+        <section id="welcome">
+            <h2>Welcome to Shamba Palace</h2>
+            <p>Your trusted partner in agricultural success. At Shamba Palace, we provide modern farm machinery to help
+                farmers maximize efficiency and productivity. With over 10 years of experience serving local farming
+                communities, we understand the unique challenges farmers face and offer flexible machinery rental solutions
+                that fit your schedule and budget. Whether you need equipment for planting, harvesting, or land preparation,
+                our well-maintained fleet of modern machinery is here to support your agricultural success.</p>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>Who We Are</h2>
+            <p>Shamba Palace is a leading provider of agricultural machinery hire services. Based in the heart of
+                farming communities, we aim to empower farmers by offering affordable and reliable solutions tailored to
+                their needs.</p>
+            <button onclick="window.location.href='about.html'">Learn more</button>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <h2>What We Do</h2>
+            <ul>
+                <li>Provide access to top-of-the-line farming equipment.</li>
+                <li>Offer flexible hiring options for short and long-term use.</li>
+                <li>Support farmers with guidance on selecting the best machinery for their needs.</li>
+                <li>Ensure all equipment is well-maintained and ready to perform.</li>
+            </ul>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section id="why-us">
+            <h2>Why Choose Shamba Palace?</h2>
+            <p>We are dedicated to making farming easier and more productive for you. With our experienced team, wide
+                range of machinery, and competitive pricing, we are the trusted choice for farmers everywhere.</p>
+            <ul>
+                <li>Reliable and efficient machinery.</li>
+                <li>Affordable prices tailored to farmers.</li>
+                <li>Excellent customer service and support.</li>
+                <li>Locally owned and operated with a commitment to community.</li>
+            </ul>
+        </section>
+
+        <!-- Available Machinery Section -->
+        <h2>Available Machinery:</h2>
+        <section id="machinery-list">
+            <div class="machinery">
+                <img src="images/tractor.jpg" alt="Modern Farm Tractor" class="machinery-image">
+                <h3>Tractor</h3>
+                <p>Type: Farming Machinery</p>
+                <p>Price: $20/hour</p>
+                <p>Status: Available</p>
+                <button onclick="window.location.href='login.html'">Book Now</button>
+            </div>
+            <div class="machinery">
+                <img src="images/harvester.jpg" alt="Combine Harvester" class="machinery-image">
+                <h3>Harvester</h3>
+                <p>Type: Harvesting Machinery</p>
+                <p>Price: $35/hour</p>
+                <p>Status: Not Available</p>
+                <button disabled>Unavailable</button>
+            </div>
+            <div class="machinery">
+                <img src="images/seeder.jpg" alt="seeder" class="machinery-image">
+                <h3>Seed Drill</h3>
+                <p>Type: Planting Machinery</p>
+                <p>Price: $25/hour</p>
+                <p>Status: Available</p>
+                <button onclick="window.location.href='login.html'">Book Now</button>
+            </div>
+        </section>
+        <button onclick="window.location.href='login.html'">View all machinery</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Shamba Palace.</p>
+    </footer>
+</body>
+
+</html>

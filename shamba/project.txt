@@ -1,0 +1,156 @@
+# Shamba Palace Farm Machinery Booking System.
+
+## Project Overview
+Shamba Palace is a web-based system for managing agricultural machinery rentals. 
+The system allows users to book machinery and administrators to manage bookings, machinery inventory, and user accounts.
+
+## Installation and Setup
+
+### Using XAMPP
+1. Download and install XAMPP from https://www.apachefriends.org/
+2. Copy the project folder (shamba) to `C:\xampp\htdocs\shamba` (Windows) or `/opt/lampp/htdocs/shamba` (Linux/Mac)
+3. Start XAMPP Control Panel and start Apache and MySQL services
+4. Open phpMyAdmin at http://localhost/phpmyadmin
+5. Create a new database named `shamba_palace`
+6. Import the database schema from `database/shamba.sql`
+7. Access the application at http://localhost/shamba
+
+### Using LAMPP (Linux)
+1. Install LAMPP: `sudo apt-get install lampp`
+2. Copy project folder (shamba) to `/opt/lampp/htdocs/shamba`
+3. Start LAMPP services: `sudo /opt/lampp/lampp start`
+4. Open phpMyAdmin at http://localhost/phpmyadmin
+5. Create database named `shamba_palace`
+6. Import database schema from `database/shamba.sql`
+7. Access the application at http://localhost/shamba
+
+## User Types:
+1. Regular Users
+   - Can register new accounts
+   - Book available machinery
+   - View their booking history
+   - Reset their password
+   - View machinery status and pricing
+
+2. Administrators:
+   - Manage machinery inventory (add, edit, delete)
+   - Approve or reject booking requests
+   - View all bookings
+   - Manage user accounts
+   - Update system settings
+   - Reset admin password
+
+## Login Credentials
+1. User Login:
+   - Access via login.html
+   - Required fields: username, password
+   - Registration available for new users
+
+2. Admin Login:
+   - Access via login.html (admin toggle)
+   - Required fields: username, password
+   - Default admin email: admin@shambapalace.com
+
+## Key Components
+
+1. User Dashboard (user_dashboard.php)
+   - My Bookings section
+   - Available Machinery section
+   - Booking history with status
+   - Total cost calculation
+
+2. Admin Dashboard (admin_dashboard.php)
+   - Machinery Management
+   - Bookings Management
+   - User Management
+   - System Settings
+
+3. Booking System
+   - Machinery selection
+   - Date and hours specification
+   - Status tracking (pending, approved, rejected)
+   - Rejection reason functionality
+
+4. Security Features
+   - Session management
+   - Password reset functionality
+   - User authentication
+   - Access control
+
+## Database Tables
+1. users
+   - id
+   - username
+   - email
+   - password
+
+2. admin
+   - id
+   - username
+   - email
+   - password
+
+3. machinery
+   - id
+   - name
+   - type
+   - price_per_hour
+   - status
+
+4. bookings
+   - id
+   - machinery_id
+   - user_id
+   - customer_name
+   - date
+   - hours
+   - status
+   - rejection_reason
+
+## File Structure
+1. Frontend:
+   - index.html
+   - login.html
+   - register.html
+   - reset_password.html
+   - style.css
+   - script.js
+
+2. Backend:
+   - login.php
+   - register_user.php
+   - book_machinery.php
+   - approve_booking.php
+   - reject_booking.php
+   - update_settings.php
+   - db.php (database connection)
+
+## Workflow
+1. User Booking Process:
+   - User logs in
+   - Views available machinery
+   - Selects machinery and enters booking details
+   - Submits booking request
+   - Receives status updates
+
+2. Admin Management Process:
+   - Admin logs in
+   - Reviews pending bookings
+   - Approves or rejects with reason
+   - Manages machinery inventory
+   - Updates system settings
+
+## Styling
+- Responsive design
+- Clean user interface
+- Color scheme: Blue gradient for sidebar
+- Modern form styling
+- Mobile-friendly layout
+
+## Future Enhancements
+1. Payment integration
+2. Email notifications
+3. Advanced reporting
+4. Machine maintenance tracking
+5. User reviews and ratings
+6. Mobile app development
